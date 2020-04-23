@@ -23,6 +23,10 @@ function getGenreById(id) {
   }
 }
 
+async function getGenreByName(genreName) {
+  return await Genre.find({ name: genreName });
+}
+
 async function updateGenre(id, genre) {
   const selectedGenre = await Genre.findById(id);
   selectedGenre.name = genre.name;
@@ -38,6 +42,7 @@ module.exports = {
   saveGenre: saveGenre,
   getGenreList: getGenreList,
   getGenreById: getGenreById,
+  getGenreByName: getGenreByName,
   updateGenre: updateGenre,
   deleteGenreById: deleteGenreById,
 };

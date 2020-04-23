@@ -3,6 +3,7 @@ const router = express.Router();
 const {
   getGenreList,
   getGenreById,
+  getGenreByName,
   saveGenre,
   updateGenre,
   deleteGenreById,
